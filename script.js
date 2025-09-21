@@ -1,3 +1,6 @@
+let humanScore = 0;
+let computerScore = 0;
+
 function getComputerChoice(){
     let num = Math.floor(Math.random() * 3); // 0-2
     if (num === 0){
@@ -11,7 +14,18 @@ function getComputerChoice(){
 
 getComputerChoice();
 
+function getHumanChoice(){
+    let choice = prompt("What is your choise?", "rock, paper, scissors");
+    if (choice === "rock"){
+        console.log("Correct")
+    } else if (choice === "paper"){
+        console.log("Correct1")
+    } else if (choice === "scissors"){
+        console.log("Correct2")
+    }
+}
 
+getHumanChoice();
 
 
 
