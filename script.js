@@ -1,7 +1,13 @@
-function getHumanChoice(){
-    let choice = prompt("What is your choise?", "rock, paper, scissors").toLowerCase();
-    return choice.charAt(0).toUpperCase() + choice.slice(1);
-};
+const buttons = document.querySelectorAll("button");
+let humanElement;
+
+buttons.forEach((btn) => {
+    btn.addEventListener("click", () =>{
+        humanElement = btn.id
+        playGame()
+    });
+});
+
 
 function getComputerChoice(){
     const elements = ['Rock', 'Paper', 'Scissors'];
@@ -25,13 +31,13 @@ function playGame(){
         return [humanScore, computerScore];
     }
 
-    let humanSelection = getHumanChoice();
+    let humanSelection = humanElement;
     let computerSelection = getComputerChoice();
 
     playRound(humanSelection, computerSelection);
 
-    for(i = 0; i < 0; i++){
-        humanSelection = getHumanChoice();
+    for(i = 0; i < 4; i++){
+        humanSelection = humanElement;
         computerSelection = getComputerChoice();
         playRound(humanSelection, computerSelection);
     }
@@ -45,4 +51,3 @@ function playGame(){
     }
 }
 
-playGame();
