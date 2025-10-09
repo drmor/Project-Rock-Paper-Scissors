@@ -1,0 +1,73 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #b6a8ca;
+}
+.button{
+    background: none;
+    cursor: pointer;
+    border-radius: 1.5em;
+    border: 2px, solid, #f4eaf1;
+    padding: 20px;
+    transition: 0.1s;
+}
+.button:hover{
+    transform: scale(1.02);
+}
+.button img{
+    flex: 1;
+    max-height: 150px;
+}
+.container{
+    display: flex;
+    gap: 5em;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    
+}
+.container > .buttonsBox{
+    display: flex;
+    gap: 5em;
+    flex-wrap: wrap;
+}
+.header{
+    color: #f4eaf1;
+    font-family: Courier;
+    text-align: center;
+    font-size: 1.5em;
+}
+.content{
+    color: #f4eaf1;
+    font-family: Courier;
+    text-align: center;
+    font-size: 1.5em;
+}
+.round{
+    color: #f4eaf1;
+    font-family: Courier;
+    text-align: center;
+    font-size: 1.5em;
+}
+@media screen and (max-width: 900px){
+    .button img{
+        flex: 1;
+        max-height: 50px;
+    }
+    .container > .buttonsBox{
+        display: flex;
+        gap: 1em;
+        flex-wrap: wrap;
+        max-width: 100%;
+    }
+    .container{
+        display: flex;
+        gap: 1em;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+    }
+}
